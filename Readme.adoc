@@ -1,0 +1,8 @@
+= ManualConstraints
+François Lamboley <fload@me.com>
+
+A way to manage complex constraints between two completely unrelated objects.
+
+This project was initially created for Togever.
+
+**TODO**: A readme with actual content.
