@@ -30,7 +30,7 @@ public struct ManualConstraint<Key : ManualConstraintKey> {
 		let storage = objects.reduce(nil as BoundObjectsStorage?, { currentStorage, currentObject in
 			/* Defensive programming: We check the object support the manual constraint key.
 			 * If not, in production the constraint will still be added (it won’t hurt, it will just not be used,
-			 * or might be if the object simply forgot to declare the constraint key as being supported).
+			 *  or might be if the object simply forgot to declare the constraint key as being supported).
 			 * In non-production builds though, we’ll crash with an assertion failure. */
 			if !type(of: currentObject).supportsManualConstraintKey(key) {
 				assertionFailure("Tried to add manual constraint for key \(key) on object \(currentObject) that do not explicitly support it.")

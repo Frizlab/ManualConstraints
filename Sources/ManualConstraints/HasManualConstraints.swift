@@ -20,7 +20,7 @@ import Foundation
 @MainActor
 public protocol HasManualConstraints : AnyObject {
 	
-	/** Defensive programming: If a manual constraint is added to a view for a key that it does noto support, we crash (in debug mode). */
+	/** Defensive programming: If a manual constraint is added to a view for a key that it does not support, we crash (in debug mode). */
 	static func supportsManualConstraintKey<Key : ManualConstraintKey>(_ key: Key.Type) -> Bool
 	
 	/** Should only be modified using ``ManualConstraint.addManualConstraints(on:for:)``. */
